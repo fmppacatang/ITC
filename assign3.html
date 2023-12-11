@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Nth Factorial</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="style2.css">
+        
+    </head>
+
+    <body>
+        
+    <nav> 
+        <label class="navbar">Assignment 3</label>
+     <div class="right-align">
+        <li><a class="active" href="index.html">HOME</a></li>    
+            <li><a href="assign1.html">Assignment 1</a></li>
+            <li><a href="assign2.html">Assignment 2</a></li>
+            <li><a href="assign3.html">Assignment 3</a></li>
+            <li><a href="payroll.html">Payroll</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>NTH FACTORIAL, SUM AND AVERAGE ASSIGNMENT 3</h1>
+
+        <br><br>
+        <div class="inputbox">
+            <input id="Input" type="number" required="required">
+            <span>Enter Income</span>
+        </div>
+        <div class="btn_container">
+            <button class="btn btn1" id="calculate">Calculate</button>
+            <button class="btn btn2" id="clear">Clear</button>
+        </div>
+        <div class="result">
+            <p id="result1"></p>
+            <p id="result2"></p>               
+            <p id="result3"></p>
+        </div>
+
+    </main>
+    
+    <footer>
+    </footer>
+
+<script>
+document.getElementById("calculate").addEventListener("click", 
+    function(){
+        var nthNum = 1;
+        var base = document.getElementById("Input").value * 1;
+
+        let i = 1;
+        while (i <= base) {
+            nthNum *= i;
+            i++;
+            }
+
+        document.getElementById("result1").innerHTML = `The Factorial of ${base} is : ${nthNum}`;
+    }
+);
+document.getElementById("calculate").addEventListener("click",
+    function(){
+        var sum = 0;
+        var base = document.getElementById("Input").value * 1;
+
+        let i = 1;
+        do{
+            sum += i;
+            i++;
+        }
+        while (i <= base);
+
+        document.getElementById("result2").innerHTML = `The sum of all numbers from ${base} is : ${sum}`;
+    }
+);
+document.getElementById("calculate").addEventListener("click",
+    function(){
+        var average;
+        var total = 0;
+        var base = document.getElementById("Input").value * 1;
+
+        for(let i = 1; i <= base; i++){
+            total += i;
+        }
+
+        average = total/base;
+
+        document.getElementById("result3").innerHTML = `The average of ${base} is : ${average}`;
+    }
+);
+document.getElementById("clear").addEventListener("click",
+    function() {
+        document.getElementById("Input").value="";
+        document.getElementById("result").innerHTML="";
+    }
+    );
+    </script>
+
+    <!-- Load external JavaScript -->
+    <script src="scripts.js"></script>
+    
+    </body>
+
+    </html>

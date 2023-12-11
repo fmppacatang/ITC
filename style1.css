@@ -1,0 +1,84 @@
+html {
+  height: 100%;
+}
+
+h1 {
+  color: pink;
+  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+p {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+}
+
+.colored-span {
+  color: red;
+}
+
+.inputbox {
+  margin: 20px;
+}
+
+.inputbox input {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.inputbox span {
+  color: yellow; 
+  font-style: italic;
+}  
+
+.navbar {
+  color: greenyellow;
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space;
+}
+
+h1, p {
+  margin: 10px;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(Images/cute.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.result #result {
+  color: rgb(218, 32, 100); 
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: greenyellow;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0%;
+  background: purple; 
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
